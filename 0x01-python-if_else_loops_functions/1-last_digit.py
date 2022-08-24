@@ -13,4 +13,7 @@ if(number > 0):
     else:
         print(state.format(number, mod, " and is less than 6 and not 0"))
 else:
-    print(state.format(number, mod2, " and is less than 6 and not 0"))
+    if(mod2 == 0):
+        print(state.format(number, mod2, " and is 0"))
+    else:
+        print(state.format(number, mod2, " and is less than 6 and not 0"))
