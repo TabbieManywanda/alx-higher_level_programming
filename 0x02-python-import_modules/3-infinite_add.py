@@ -4,5 +4,6 @@ if __name__ == "__main__":
 
     total = 0
     for i in sys.argv:
-        total += int(sys.argv[i])
+        if i != sys.argv[0]:
+            total += int(sys.argv[i])
     print(total)
