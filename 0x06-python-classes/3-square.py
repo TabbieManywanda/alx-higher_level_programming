@@ -9,7 +9,7 @@ class Square:
 
         if __size < 0:
             raise ValueError("size must be >= 0")
-        if typr(__size) is not int:
+        if type(__size) is not int:
             raise TypeError("size must be an integer")
 
     def area(self):
