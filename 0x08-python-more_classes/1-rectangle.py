@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""Python class Rectangle having width and height 
-attributes added and privatised.
-The arguments for both methods have to be positive 
-integers."""
+"""Python class rectangle having attributes added"""
 
 
 class Rectangle:
