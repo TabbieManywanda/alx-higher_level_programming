@@ -5,7 +5,6 @@
 class Rectangle:
     """Width and height have to be positive integers"""
     def __init__(self, width=0, height=0):
-        """Initialising the class"""
         if width < 0:
             raise ValueError("width must be >= 0")
         if type(width) is not int:
