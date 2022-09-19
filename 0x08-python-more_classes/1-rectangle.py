@@ -4,10 +4,18 @@
 
 class Rectangle:
     """Width and height have to be positive integers"""
-    def __init__(self, __width=0, __height=0):
+    def __init__(self, width=0, height=0):
         """Initialising the class"""
-        self.__width = __width
-        self.__height = __height
+        self.__width = width
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        self.__height = height
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
 
     @property
     def width(self):
