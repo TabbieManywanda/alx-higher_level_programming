@@ -1,0 +1,115 @@
+The ``2-matrix_divided`` module
+============================
+
+How to use 2-matrix_divided.py
+
+============================
+Has only one function called ``matrix_divided`` divides all elements of
+a matrix by the ``div`` parameter of the function.
+
+Importing the function:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+Checking for matrix as list of lists of integers:
+>>> matrix_divided([[4, 6, 8], [5, 9, 7]], 3)
+[[1.33, 2.0, 2.67], [1.67, 3.0, 2.33]]
+
+
+Checking for matrix as list of lists of floats:
+>>> matrix_divided([[4.2, 6.5, 8.5], [5.1, 9.0, 7.6]], 3)
+[[1.4, 2.17, 2.83], [1.7, 3.0, 2.53]]
+
+
+Checking for int and float mix:
+>>> matrix_divided([[4, 6.5, 8], [5, 9.5, 7.6]], 3)
+[[1.33, 2.17, 2.67], [1.67, 3.17, 2.53]]
+
+
+Checking for non list arguments passed:
+
+Tuples:
+>>> matrix_divided([(4.2, 6.5, 8.5), [5.1, 9.0, 7.6]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[4.2, 6.5, 8.5], (5.1, 9.0, 7.6)], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(([4.2, 6.5, 8.5], [5.1, 9.0, 7.6]), 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Sets:
+>>> matrix_divided([{4.2, 6.5, 8.5}, [5.1, 9.0, 7.6]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[4.2, 6.5, 8.5], {5.1, 9.0, 7.6}], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Checking for non-integer and non-float values:
+
+Strings:
+>>> matrix_divided([["string", 6, 8], [5, "string", 7]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Boolean:
+>>> matrix_divided([[True, 6, 8], [5, 8, 7]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+None:
+>>> matrix_divided([[None, 6, 8], [5, 8, 7]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Checking when there is only one list in matrix:
+>>> matrix_divided([[4, 5, 8]], 3)
+[[1.33, 1.67, 2.67]]
+
+
+Checking when no matrix is passed:
+>>> matrix_divided(3)
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+Checking when div == 0:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+
+Checking when div == non int values:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "string")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3.2)
+[[0.31, 0.62, 0.94], [1.25, 1.56, 1.88]]
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], None)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], True)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+
+Checking when div is not passed:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+Checking when nothing is passed:
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
