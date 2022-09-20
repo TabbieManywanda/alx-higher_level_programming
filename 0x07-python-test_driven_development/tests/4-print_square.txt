@@ -1,0 +1,60 @@
+The ``4-print_square`` module
+============================
+
+How to use 4-print_square.py
+
+============================
+Has only one function called ``print_square`` which prints a
+square with the character `#`.
+
+Argument passed as `size` must be a positive integer otherwise
+raise TypeError and ValueError exceptions.
+
+Importing the function:
+>>> print_square = __import__('4-print_square').print_square
+
+Checking for positive int arguments passed:
+>>> print_square(2)
+##
+##
+
+
+Checking for negative int passed:
+>>> print_square(-2)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+
+Checking for non int arguments:
+Float:
+>>> print_square(2.1)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+
+String:
+>>> print_square("string")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Boolean:
+>>> print_square(True)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Complex number:
+>>> print_square(3e+26j)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+
+Checking for zero argument passed:
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+
+Checking for more than 1 argument passed:
+>>> print_square(2, 5)
+Traceback (most recent call last):
+TypeError: print_square() takes 1 positional argument but 2 were given
