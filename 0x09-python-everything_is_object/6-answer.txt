@@ -1,1 +1,1 @@
-NameError: s2 is not defined
+NameError
