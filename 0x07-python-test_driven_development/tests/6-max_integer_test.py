@@ -49,7 +49,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_maximum_middle(self):
         """Checking maximum value located in the middle of the list"""
         test_middle = [56, 25, 36, 89, 12, 2]
-        self.assertEqual(max_integer(test_max), 89)
+        self.assertEqual(max_integer(test_middle), 89)
 
     def test_maximum_end(self):
         """Checking maximum value at the end of the list"""
