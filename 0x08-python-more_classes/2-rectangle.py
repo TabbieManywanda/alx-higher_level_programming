@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""class Rectangle with methods for area and perimeter"""
+"""class Rectangle having area and perimeter methods
+added to it"""
 
 
 class Rectangle:
     """class Rectangle definition"""
+
     def __init__(self, width=0, height=0):
         """initializing class Rectangle:
         Arguments - weight and height"""
