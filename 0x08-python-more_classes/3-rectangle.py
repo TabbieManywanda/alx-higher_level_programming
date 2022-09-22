@@ -52,4 +52,4 @@ class Rectangle:
         """printing out the rectangle with the character'#'"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return ("#" * width + '\n') * height
+        return ("#" * self.__width + '\n') * self.__height
