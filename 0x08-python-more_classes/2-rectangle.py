@@ -5,7 +5,6 @@ added to it"""
 
 class Rectangle:
     """class Rectangle definition"""
-
     def __init__(self, width=0, height=0):
         """initializing class Rectangle:
         Arguments - weight and height"""
@@ -18,13 +17,13 @@ class Rectangle:
         return self.__width
 
     @property
-    """height getter method"""
     def height(self):
+        """height getter method"""
         return self.__height
 
     @width.setter
-    """width setter method"""
     def width(self, value):
+        """width setter method"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -32,8 +31,8 @@ class Rectangle:
         self.__width = value
 
     @height.setter
-    """height setter method"""
     def height(self, value):
+        """height setter method"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
