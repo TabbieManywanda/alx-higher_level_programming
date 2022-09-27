@@ -1,0 +1,70 @@
+The ``7-base_geometry`` modulee
+============================
+
+How to use 7-base_geometry.py
+
+============================
+Has only one class ``BaseGeometry`` that validates value
+and area
+
+Importing the function:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking for module documentation:
+>>> mod_doc = __import__("7-base_geometry").__doc__
+>>> len(mod_doc) > 1
+True
+
+Checking for class documentation:
+>>> class_doc = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(class_doc) > 1
+True
+
+Checking for method documentation:
+>>> method_doc1 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(method_doc1) > 1
+True
+
+>>> method_doc2 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(method_doc2) > 1
+True
+
+Checking if value is negative or equal to zero:
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("distance", -4)
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("distance", 0)
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
+Checking if value is not integer:
+Float:
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("distance", 4.6)
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] distance must be an integer
+
+String:
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("distance", "four")
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] distance must be an integer
+
+None
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("distance", None)
+... except Exception as e:
+...    print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] distance must be an integer
