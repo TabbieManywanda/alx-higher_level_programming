@@ -22,7 +22,7 @@ True
 
 Checking for method documentation:
 >>> method_doc = __import__("1-my_list").MyList.print_sorted.__doc__
->>>len(method_doc) > 1
+>>> len(method_doc) > 1
 True
 
 Checking for inheritance:
@@ -36,6 +36,8 @@ Checking for sorted list:
 >>> my_list.append(3)
 >>> my_list.append(4)
 >>> my_list.append(5)
+>>> print(my_list)
+[1, 2, 3, 4, 5]
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
@@ -46,7 +48,9 @@ Checking for unsorted list:
 >>> my_list.append(2)
 >>> my_list.append(3)
 >>> my_list.append(5)
-my_list.print_sorted()
+>>> print (my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
 Checking for negative list element:
@@ -56,10 +60,14 @@ Checking for negative list element:
 >>> my_list.append(2)
 >>> my_list.append(3)
 >>> my_list.append(5)
-my_list.print_sorted()
+>>> print(my_list)
+[1, -4, 2, 3, 5]
+>>> my_list.print_sorted()
 [-4, 1, 2, 3, 5]
 
 Checking for empty list:
 >>> my_list = MyList()
-my_list.print_sorted()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
 []
