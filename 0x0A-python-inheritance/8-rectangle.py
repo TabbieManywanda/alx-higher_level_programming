@@ -21,7 +21,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """Inherits from BaseGeometry"""
     def __init__(self, width, height):
-        """Initializing instance:
+        """Initializing instance
         Args - width, height"""
         BaseGeometry.integer_validator(self, "width", width)
         BaseGeometry.integer_validator(self, "height", height)
