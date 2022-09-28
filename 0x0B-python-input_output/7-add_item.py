@@ -16,5 +16,5 @@ except FileNotFoundError:
     pylist = []
 
 for x in sys.argv[1:]:
-    pylist.append(x)
+    pylist.append(str(x))
 save_to_json_file(pylist, filename)
