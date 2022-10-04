@@ -13,8 +13,6 @@ class Rectangle(Base):
         """Initializing instance;
         calling super class for id argument if not
         passed in this particular class"""
-        super().__init__(id)
-
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -38,6 +36,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be > 0")
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
