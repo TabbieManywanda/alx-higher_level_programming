@@ -2,6 +2,9 @@
 """class Rectangle that inherits from Base"""
 
 
+from models.base import Base
+
+
 class Rectangle(Base):
     """class inheriting from another class Base;
     has private instance attributes each with its
