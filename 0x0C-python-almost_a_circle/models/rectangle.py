@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""class Rectange that inherits from Base"""
+"""class Rectangle that inherits from Base"""
 
 
 class Rectangle(Base):
-    """class iheriting from another class Base;
+    """class inheriting from another class Base;
     has private instance attributes each with its
     own getter and setter"""
     def __init__(self, width, height, x, y, id=None):
