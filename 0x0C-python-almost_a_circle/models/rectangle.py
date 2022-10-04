@@ -101,10 +101,9 @@ class Rectangle(Base):
     def display(self):
         """Prints in stdout a Rectangle instance
         with '#' characters"""
-        for x in range(self.__height):
-            for y in range(self.__width):
-                print("#", end="")
-            print()
+        print(("\n" * self.__y) +
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for x in range(self.__height)))
 
     def __str__(self):
         """Returns string in format of
