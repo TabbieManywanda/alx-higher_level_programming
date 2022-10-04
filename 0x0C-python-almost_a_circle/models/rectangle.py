@@ -9,7 +9,7 @@ class Rectangle(Base):
     """class inheriting from another class Base;
     has private instance attributes each with its
     own getter and setter"""
-    def __init__(self, width, height, x, y, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """Initializing instance;
         calling super class for id argument if not
         passed in this particular class"""
