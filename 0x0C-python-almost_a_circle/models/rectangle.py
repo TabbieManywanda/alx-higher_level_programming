@@ -10,10 +10,7 @@ class Rectangle(Base):
         """Initializing instance;
         calling super class for id argument if not
         passed in this particular class"""
-        if id is None:
-            super().__init__(id)
-        else:
-            self.id = id
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
