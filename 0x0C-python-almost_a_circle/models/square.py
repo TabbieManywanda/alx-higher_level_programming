@@ -34,7 +34,7 @@ class Square(Rectangle):
         """Assigns attributes"""
         if len(args) != 0:
             for count in range(len(args)):
-                if count == 0 :
+                if count == 0:
                     self.id = args[count]
                 elif count == 1:
                     self.size = args[count]
