@@ -12,6 +12,6 @@ if __name__ == "__main__":
     dbase_cursor.execute("SELECT * FROM states ORDER BY id ASC")
     fetchdata = dbase_cursor.fetchall()
     for x in fetchdata:
-        print(i)
+        print(x)
     dbase_cursor.close()
     dbase.close()
