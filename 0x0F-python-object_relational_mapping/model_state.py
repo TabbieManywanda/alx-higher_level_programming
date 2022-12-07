@@ -8,7 +8,12 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
+    '''class inherits from Base
+    links to the MySQL table `states`
+    '''
+
     __tablename__ = 'states'
     id = Column(Integer, autoincrement=True, primary_key=True,
                 unique=True, nullable=False)
