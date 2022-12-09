@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''relationship with city'''
 
-from sqlalchemy import relationship
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
