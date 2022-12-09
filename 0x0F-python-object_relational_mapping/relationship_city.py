@@ -8,7 +8,7 @@ from relationship_state import Base
 
 class City(Base):
     '''relationship with class State'''
-    __table__ = 'cities'
+    __tablename__ = 'cities'
     id = Column(
             Integer, autoincrement=True, unique=True,
             nullable=False, primary_key=True)
